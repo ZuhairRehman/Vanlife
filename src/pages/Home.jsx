@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import videoBG from "../assets/camper.mp4";
+import videoBG from "../assets/HomepageImages/camper.mp4";
+
 
 const Home = () => {
   return (

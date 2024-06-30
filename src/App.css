@@ -2,9 +2,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
-  height: 8vh;
+  padding: 15px 20px;
   font-family: sans-serif;
+  background-color: #ffeeda;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header-link {
@@ -29,6 +34,7 @@ nav a {
 .home-container {
   height: 100vh;
   width: 100%;
+  background-color: FFF7ED;
 }
 
 video {
@@ -39,7 +45,7 @@ video {
 
 .overlay {
   position: absolute;
-  top: 8vh;
+  top: 10vh;
   left: 0;
   width: 100%;
   height: 100%;
@@ -90,4 +96,63 @@ video {
   font-family: sans-serif;
   font-weight: 600;
   padding: 10px;
+}
+
+.about-container {
+  background-color: #ffeeda;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+}
+
+.cta {
+  margin: 2vh 0;
+  width: 60%;
+}
+.cta h1 {
+  font-size: 4vw;
+  line-height: 5vw;
+  font-weight: 500;
+  margin-bottom: 5vh;
+  padding: 15px;
+  font-family: 
+}
+
+.cta p {
+  font-size: 1.1em;
+  margin: 5vh 0;
+  padding: 15px;
+}
+
+.cta-btn {
+  padding: 15px 40px;
+  background-color: #ff8c38;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 2.5rem;
+  margin: 10vh 10vh;
+}
+
+.cta h2 {
+  margin-bottom: 5vh;
+}
+
+
+
+.container-right {
+  height: 100%;
+  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-right-img1 {
+  height: 50vh;
+  width: 100%;
+}
+.container-right-img2 {
+  height: 50vh;
+  width: 50%;
 }

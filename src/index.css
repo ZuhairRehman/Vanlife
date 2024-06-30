@@ -9,5 +9,15 @@ html,
 body {
   height: 100vh;
   width: 100%;
+  background-color: #ffeeda;
   overflow: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  z-index: 99;
 }
