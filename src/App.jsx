@@ -4,6 +4,7 @@ import "./App.css";
 import "./index.css";
 import Home from "./pages/Home.jsx";
 import Vans from "./pages/Vans.jsx";
+import "./server";
 
 function App() {
   return (

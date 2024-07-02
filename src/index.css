@@ -9,15 +9,16 @@ html,
 body {
   height: 100vh;
   width: 100%;
-  background-color: #ffeeda;
-  overflow: hidden;
+  background-color: #fff7ed;
+
 }
 
 header {
   position: sticky;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 5vh;
   width: 100%;
-  z-index: 99;
+  z-index: 1009;
+  margin-bottom: 2vh;
 }
