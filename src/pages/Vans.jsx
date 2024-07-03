@@ -15,7 +15,7 @@ const Vans = () => {
       <section className="van-info">
         <h3>{van.name}</h3>
         <p>
-          ${van.price}
+          <span className="van-price">${van.price}</span>
           <span>/day</span>
         </p>
       </section>

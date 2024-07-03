@@ -204,14 +204,3 @@ video {
   border-radius: 5px;
 }
 
-.van-type {
-  height: 34px;
-  padding: 6px 26px;
-  font-style: normal;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffead0;
-  color: #4d4d4d;
-  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
-}
