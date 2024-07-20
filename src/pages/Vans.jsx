@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Vans = () => {
   const [vanData, setVanData] = useState([]);
@@ -11,22 +12,24 @@ const Vans = () => {
 
   const vans = vanData.map((van) => (
     <div key={van.id} className="van-tile">
-      <img className="van-img" src={van.imageUrl} />
-      <section className="van-info">
-        <h3>{van.name}</h3>
-        <p>
-          <span className="van-price">${van.price}</span>
-          <span>/day</span>
-        </p>
-      </section>
-      <i className={`van-type ${van.type} selected`}>{van.type}</i>
+      <Link to={`/vans/${van.id}`}>
+        <img className="van-img" src={van.imageUrl} />
+        <section className="van-info">
+          <h3>{van.name}</h3>
+          <p>
+            <span className="van-price">${van.price}</span>
+            <span>/day</span>
+          </p>
+        </section>
+        <i className={`van-type ${van.type} selected`}>{van.type}</i>
+      </Link>
     </div>
   ));
 
   return (
-    <section className="vans-container">
+    <section className="vans-container bg-orange-400 text-white font">
       <h1>Explore our van options</h1>
-      <div>
+      <div className="list-grid">
         <ul className="filter-labels">
           <li>
             <a href="">Simple</a>
