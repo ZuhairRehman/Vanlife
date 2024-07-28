@@ -10,6 +10,8 @@ const Vans = () => {
       .then((data) => setVanData(data.vans));
   }, []);
 
+  console.log(vanData);
+
   const vans = vanData.map((van) => (
     <div key={van.id} className="van-tile">
       <Link to={`/vans/${van.id}`}>
