@@ -19,7 +19,7 @@ const Vans = () => {
         <section className="van-info">
           <h3>{van.name}</h3>
           <p>
-            <span className="van-price">${van.price}</span>
+            { <span className="van-price">${van.price}</span>  /* dollar sign is for the price not for the object property in JSX as it is not needed to be is JS*/ }
             <span>/day</span>
           </p>
         </section>
