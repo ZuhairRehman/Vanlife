@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HostVans = () => {
   const [hostVans, setHostVans] = useState([]);
-
-  const hostParams = useParams();
 
   useEffect(() => {
     fetch(`/api/host/vans`)
       .then((resp) => resp.json())
       .then((data) => setHostVans(data.vans));
-  }, [hostParams.id]);
+  }, []);
   console.log(hostVans);
 
   const hostListedVans = hostVans.map((listedVan) => (
-    <div key={listedVan.hostId} className="">
-      <Link to={`/api/host/vans/${listedVan.hostId}`}>
+    <div key={listedVan.id} className="">
+      <Link to={`/host/vans/${listedVan.id}`}>
         <h1>Your listed Vans</h1>
         <section className="flex">
           <img src={listedVan.imageUrl} alt="" />
@@ -33,6 +31,14 @@ const HostVans = () => {
     </div>
   ));
 
-  return <section>{hostListedVans}</section>;
+  return (
+    <div>
+      {hostVans.length > 0 ? (
+        <section> {hostListedVans}</section>
+      ) : (
+        <h2>Loading...</h2>
+      )}
+    </div>
+  );
 };
 export default HostVans;

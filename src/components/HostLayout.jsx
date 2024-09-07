@@ -10,7 +10,7 @@ const HostLayout = () => {
               ? " active: underline decoration-orange-400"
               : "hover:underline text-gray-600";
           }}
-          to="/host"
+          to="."
           end
         >
           Dashboard
@@ -21,7 +21,7 @@ const HostLayout = () => {
               ? " active: underline decoration-orange-400"
               : "hover:underline text-gray-600";
           }}
-          to="/host/income"
+          to="income"
         >
           Income
         </NavLink>
@@ -31,7 +31,7 @@ const HostLayout = () => {
               ? " active: underline decoration-orange-400"
               : "hover:underline text-gray-600";
           }}
-          to="/host/vans"
+          to="vans"
         >
           Vans
         </NavLink>
@@ -41,7 +41,7 @@ const HostLayout = () => {
               ? " active: underline decoration-orange-400"
               : "hover:underline text-gray-600";
           }}
-          to="/host/reviews"
+          to="reviews"
         >
           Reviews
         </NavLink>
