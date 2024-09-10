@@ -1,8 +1,15 @@
-import { Outlet } from "react-router-dom";
-import HostVanDetail from "./HostVanDetail";
-import HostVanPhotos from "./HostVanPhotos";
+import { useOutletContext } from "react-router-dom";
 
 const HostVanInfo = () => {
-  return <>Host Van info</>;
+  const { selectedHostVan } = useOutletContext();
+
+  return (
+    <section>
+      <h4>Name: {selectedHostVan.name}</h4>
+      <h4>Category: {selectedHostVan.type}</h4>
+      <h4>Description: {selectedHostVan.description}</h4>
+      <h4>Price: {selectedHostVan.price}</h4>
+    </section>
+  );
 };
 export default HostVanInfo;

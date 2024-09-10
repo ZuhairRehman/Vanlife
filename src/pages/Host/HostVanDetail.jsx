@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const HostVanDetail = () => {
   const [selectedHostVan, setSelectedHostVan] = useState(null);
+
   const { id } = useParams();
   useEffect(() => {
     fetch(`/api/host/vans/${id}`)
@@ -11,27 +12,24 @@ const HostVanDetail = () => {
       .then((data) => setSelectedHostVan(data.vans));
   }, []);
 
+  if (!selectedHostVan) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
-    <>
-      <div>
-        {selectedHostVan ? (
-          <section className="flex">
-            <Link to=".." relative="path">
-              <span>Back to all vans</span>
-            </Link>
-            <img src={selectedHostVan.imageUrl} alt={selectedHostVan.name} />
-            <div className="">
-              <h2>{selectedHostVan.name}</h2>
-              <p className="">
-                ${selectedHostVan.price}
-                <span>/day</span>
-              </p>
-            </div>
-          </section>
-        ) : (
-          <h2>Loading...</h2>
-        )}
+    <section className="flex">
+      <Link to=".." relative="path">
+        <span>Back to all vans</span>
+      </Link>
+      <img src={selectedHostVan.imageUrl} alt={selectedHostVan.name} />
+      <div className="">
+        <h2>{selectedHostVan.name}</h2>
+        <p className="">
+          ${selectedHostVan.price}
+          <span>/day</span>
+        </p>
       </div>
+
       <nav className="flex gap-3 mt-5 text-2xl">
         <NavLink
           className={({ isActive }) => {
@@ -67,8 +65,8 @@ const HostVanDetail = () => {
           Photos
         </NavLink>
       </nav>
-      <Outlet />
-    </>
+      <Outlet context={{ selectedHostVan }} />
+    </section>
   );
 };
 export default HostVanDetail;
