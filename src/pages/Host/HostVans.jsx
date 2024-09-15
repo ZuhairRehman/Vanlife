@@ -9,11 +9,10 @@ const HostVans = () => {
       .then((resp) => resp.json())
       .then((data) => setHostVans(data.vans));
   }, []);
-  console.log(hostVans);
 
   const hostListedVans = hostVans.map((listedVan) => (
     <div key={listedVan.id} className="">
-      <Link to={`/host/vans/${listedVan.id}`}>
+      <Link to={`${listedVan.id}`}>
         <h1>Your listed Vans</h1>
         <section className="flex">
           <img src={listedVan.imageUrl} alt="" />
